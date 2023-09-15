@@ -7,8 +7,7 @@ Analyzing the alcohol consumption to death ratio per state to find any observabl
 Fiza, Mimi, Nivetha, Katherine, Shipra
 
 
-### Questions -
-
+### Questions
 1) Comparison between alcohol consumption by state vs. alcohol-related deaths.
 2) Distribution of alcohol consumption type by state.
 3) Are there sufficient rehabilitation resources in areas where alcohol-related deaths are prevalent, i.e. California?
@@ -18,7 +17,7 @@ Fiza, Mimi, Nivetha, Katherine, Shipra
 
 
 ### Data Sets - (focus on 2019 year)
-1) https://www.cdc.gov/mmwr/volumes/69/wr/mm6930a1.htm (Alcohol-related deaths from 2011-2015) <br>
+1) Alcohol-related deaths from 2011-2015 <br> https://www.cdc.gov/mmwr/volumes/69/wr/mm6930a1.htm <br>
   a) More recent data on alcohol-related deaths <br>(https://www.bankrate.com/insurance/car/drunk-driving/#stats-2022) <br>
   https://www-fars.nhtsa.dot.gov/States/StatesAlcohol.aspx <br>
   b) Split by age <br> https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/topic-pages/tables/table-38 <br>
