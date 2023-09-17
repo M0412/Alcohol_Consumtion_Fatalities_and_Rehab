@@ -15,10 +15,10 @@ var myMap= L.map('map', {
 
 // Define a chooseColor function that will give each State a different color based on the number of facilities available
 function chooseColor(numberoffacilities){
-    if (numberoffacilities < 10) return "greenyellow";
-    else if (numberoffacilities < 30) return "yellowgreen";
-    else if (numberoffacilities < 50) return "yellow";
-    else if (numberoffacilities < 70) return "orange";
+    if (numberoffacilities < 5) return "greenyellow";
+    else if (numberoffacilities < 10) return "yellowgreen";
+    else if (numberoffacilities < 15) return "yellow";
+    else if (numberoffacilities < 20) return "orange";
     else return "red";
 };
 
@@ -32,9 +32,9 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 var legend = L.control({position: "bottomright"});
 legend.onAdd = function() {
     var div = L.DomUtil.create("div", "info legend"),
-    number = [10, 30, 50, 70];
+    number = [5, 10, 15, 20];
     
-    div.innerHTML += "<h3 style='text-align: center'>Depth</h3>"
+    div.innerHTML += "<h3 style='text-align: center'>No of Facilities</h3>"
     
     for (var i = 0; i < number.length; i++) {
         div.innerHTML +=
