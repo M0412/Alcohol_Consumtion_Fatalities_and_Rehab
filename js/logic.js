@@ -7,19 +7,19 @@ var maxBounds = L.latLngBounds(
 
 // Create our map
 var myMap= L.map('map', {
-    'center': [0, 0],
-    'zoom': 0,
+    'center': [37.8, -96],
+    'zoom': 15,
     'maxBounds': maxBounds
 }).fitBounds(maxBounds);
 
 
 // Define a chooseColor function that will give each State a different color based on the number of facilities available
 function chooseColor(numberoffacilities){
-    if (numberoffacilities < 5) return "greenyellow";
-    else if (numberoffacilities < 10) return "yellowgreen";
-    else if (numberoffacilities < 15) return "yellow";
-    else if (numberoffacilities < 20) return "orange";
-    else return "red";
+    if (numberoffacilities < 5) return "white";
+    else if (numberoffacilities < 10) return "yellow";
+    else if (numberoffacilities < 15) return "orange";
+    else if (numberoffacilities < 20) return "red";
+    else return "maroon";
 };
 
 // Adding the tile layer
@@ -45,7 +45,26 @@ legend.onAdd = function() {
 };
 
 // Add our legend to the map
-legend.addTo(myMap)
+legend.addTo(myMap);
+
+// Adding control
+var info = L.control();
+
+info.onAdd = function (map) {
+    this._div = L.DomUtil.create('div', 'info'); 
+    this.update();
+    return this._div;
+};
+
+// method that we will use to update the control based on feature properties passed
+info.update = function (props) {
+    this._div.innerHTML = '<h4>Rehab Facilities</h4>' +  (props ?
+        '<b>' + props.state_name + '</b><br />' + props.number + ' facilites / mi<sup>2</sup>'
+        : 'Hover over a state');
+};
+
+info.addTo(myMap);
+
 
 
     
