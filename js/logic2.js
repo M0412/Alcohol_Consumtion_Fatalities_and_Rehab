@@ -10,11 +10,11 @@ var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // Define a chooseColor function that will give each State a different color based on the number of facilities available
 function chooseColor(numberoffacilities){
-    if (numberoffacilities < 5) return "white";
-    else if (numberoffacilities < 10) return "yellow";
-    else if (numberoffacilities < 15) return "orange";
-    else if (numberoffacilities < 20) return "red";
-    else return "maroon";
+    if (numberoffacilities < 5) return "#edf8fb";
+    else if (numberoffacilities < 10) return "#b3cde3";
+    else if (numberoffacilities < 15) return "#8c96c6";
+    else if (numberoffacilities < 20) return "#8856a7";
+    else return "#810f7c";
 };
 
 // Add a legend to display information about our map
