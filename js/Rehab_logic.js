@@ -9,7 +9,7 @@ var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // Saving our data in a variable
-const data = "data/New_Rehab_Facilities_by_State.json";
+const data = "../Data/JSON_Files/New_Rehab_Facilities_by_State.json";
 
 // Console log our data
 d3.json(data).then(function(response){
