@@ -1,6 +1,6 @@
-d3.json("../Data/JSON_Files/us-states.geojson")
+d3.json("../../Data/JSON_Files/us-states.geojson")
   .then(function (usStatesData) {
-    d3.json("../Data/JSON_Files/Alcohol_Consumption_by_State_2022.json")
+    d3.json("../../Data/JSON_Files/Alcohol_Consumption_by_State_2022.json")
       .then(function (alcohol_data) {
         // Iterate through the features in usStatesData and add Alcohol Consumption data to properties
         usStatesData.features.forEach(function (stateFeature) {
@@ -27,7 +27,7 @@ d3.json("../Data/JSON_Files/us-states.geojson")
         // Now, usStatesData has the "Alcohol Consumption Per Capita" data in its properties
         console.log(usStatesData);
       
-        let myMap = L.map('map').setView([37.8, -96], 3);
+        let myMap = L.map('consumption_map').setView([37.8, -96], 3);
 
         let tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
@@ -81,7 +81,7 @@ d3.json("../Data/JSON_Files/us-states.geojson")
         
         var legend = L.control({ position: 'bottomright' });
 
-        var labels = ['16-24', '24-32', '32-40', '40-48', '48-56', '56+'];
+        var labels = ['16-24 gal', '24-32 gal', '32-40 gal', '40-48 gal', '48-56 gal', '56+ gal'];
 
         legend.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'info legend');

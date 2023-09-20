@@ -1,7 +1,7 @@
 let selector = d3.select("#selDataset")
 let alcohol_data
 
-d3.json("../Data/JSON_Files/Alcohol_Consumption_by_State_2022.json")
+d3.json("../../Data/JSON_Files/Alcohol_Consumption_by_State_2022.json")
 .then(function (data) {
     console.log(data);
 
