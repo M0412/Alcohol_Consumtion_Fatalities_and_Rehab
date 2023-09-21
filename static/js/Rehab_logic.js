@@ -35,9 +35,17 @@ d3.json(data).then(function(response){
             if (location1 && location2) {
                 console.log("found marker")
 
+                var popup = "<h4>" + facilityList[j].name1 + "</h4><hr><h5>" + facilityList[j].street1 + ",</h5><h5>" + facilityList[j].city+ ", " + response[i].state_name + ", " + facilityList[j].zip + "</h5>"
+
+                // specify popup options 
+                var customOptions =
+                {'maxWidth': '400',
+                'width': '200',
+                'className' : 'popupCustom'}
+
                 // Add a new marker to the cluster group, and bind a popup.
                 markers.addLayer(L.marker([location2, location1])
-                .bindPopup("<h3>" + facilityList[j].name1 + "</h3><hr><h4>" + facilityList[j].street1 + ",</h4><h4>" + facilityList[j].city+ ", " + response[i].state_name + ", " + facilityList[j].zip + "</h4>"));
+                .bindPopup(popup,customOptions));
             };
         };
         
