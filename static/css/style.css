@@ -55,3 +55,13 @@ img {
   margin: 0;
   padding: 0;
 }
+#tabs h3 {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+
+body {
+  padding : 10px ;
+  
+}
