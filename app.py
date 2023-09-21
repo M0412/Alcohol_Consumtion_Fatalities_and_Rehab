@@ -11,7 +11,7 @@ client = MongoClient('localhost', 27017)
 db = client.alcohol_db
 
 @app.route("/")
-def website():
+def index():
     return render_template('index.html')
 
 @app.route("/consumption", methods=["GET"])
@@ -52,11 +52,7 @@ def get_alcohol_facilities():
 
     return jsonify(json_documents)
 
-# @app.route("/templates/index.html", methods=["GET"])
-# def website():
-#     return render_template('index.html')
-
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
 
 # client.close()

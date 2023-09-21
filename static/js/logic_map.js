@@ -1,6 +1,6 @@
-d3.json("../../Data/JSON_Files/us-states.geojson")
+d3.json("../static/Data/JSON_Files/us-states.geojson")
   .then(function (usStatesData) {
-    d3.json("../../Data/JSON_Files/Alcohol_Consumption_by_State_2022.json")
+    d3.json("../static/Data/JSON_Files/Alcohol_Consumption_by_State_2022.json")
       .then(function (alcohol_data) {
         // Iterate through the features in usStatesData and add Alcohol Consumption data to properties
         usStatesData.features.forEach(function (stateFeature) {
