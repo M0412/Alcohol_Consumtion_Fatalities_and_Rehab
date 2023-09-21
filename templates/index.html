@@ -14,20 +14,27 @@
     <title>Sober Up!</title>
     <!-- Add Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
     <!-- Add our project's CSS code -->
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <!-- Marker cluster CSS -->
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+
     <!-- Add Chroma JS Package -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.1/chroma.min.js"></script>
+
     <!-- Add Leaflet and D3.js scripts -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
     <!-- Marker cluster JavaScript code -->
     <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+
      <!-- Bootstrap core JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -100,6 +107,42 @@
             <input type="submit" value="Search">
         </form>
     </div>  
+    <div class="w3-container w3-white">
+        <h2> </h2>
+        <h2> </h2>
+    </div>
+    <div class="w3-container w3-threequarter ">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dropdown Events</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <h2>Alcohol fatalities in 2022</h2>
+    <p>Select a state</p>
+    <select id="selDataset" onchange="optionChanged(this.value)"></select>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <h3 style="text-align: center;">Age groups</h3>
+                <div id="bar"></div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-xs-6">  
+                <h3 style="text-align: center;">Gender</h3>
+                <div id="genderPie"></div>
+            </div>
+            <div class="col-xs-6">
+                <h3 style="text-align: center;">Race</h3>  
+                <div id="racePie"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
     <hr></hr>
 
 <div class="w3-container w3-threequarter"><h2>Other Available Routes</h2></div>
@@ -140,6 +183,7 @@
     <!-- Add your main JavaScript code -->
     <script src="../static/js/logic_map.js"></script>
     <script src="../static/js/Rehab_logic.js"></script>
+    <script src="../static/js/fatalities.js"></script>
 </body>
 </html>
 
