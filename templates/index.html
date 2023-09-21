@@ -92,7 +92,16 @@
         <h2> </h2>
         <h2> </h2>
     </div>
+    <div class="w3-container w3-third">
+      <p>Find out what rehabilitation facilities exist in your state below!</p>
+        <form action="/search_by_state" method="POST">
+            <label for="state_input">Enter a State Name:</label>
+            <input type="text" id="state_input" name="state_input" required>
+            <input type="submit" value="Search">
+        </form>
+    </div>  
     <hr></hr>
+
 <div class="w3-container w3-threequarter"><h2>Other Available Routes</h2></div>
 
 <div id="tabs" class="w3-container w3-threequarter">	
@@ -127,12 +136,6 @@
         <a href="http://127.0.0.1:5000/consumption">Alcohol Consumption Across America</a><br>
         <a href="http://127.0.0.1:5000/rehab_facilities">Rehab Facilities Across America</a><br>
         <p><br></p> -->
-        <p>Find out what rehabilitation facilities exist in your state below!</p>
-        <form action="/search_by_state" method="POST">
-            <label for="state_input">Enter a State Name:</label>
-            <input type="text" id="state_input" name="state_input" required>
-            <input type="submit" value="Search">
-        </form>
     <!--</div> -->
     <!-- Add your main JavaScript code -->
     <script src="../static/js/logic_map.js"></script>
