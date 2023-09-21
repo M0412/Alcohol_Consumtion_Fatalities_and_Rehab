@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request, redirect, url_for
 # from flask_cors import CORS, cross_origin
 from pymongo import MongoClient
 import json
@@ -27,6 +27,7 @@ def get_alcohol_consumption():
 
     return jsonify(json_documents)
 
+
 @app.route("/fatalities", methods=["GET"])
 def get_alcohol_fatalities():
     col2=db.alcohol_fatalities_data
@@ -43,7 +44,7 @@ def get_alcohol_fatalities():
 @app.route("/rehab_facilities", methods=["GET"])
 def get_alcohol_facilities():
     col3=db.alcohol_rehabilitation_data
-    collections=col3.find()
+    collections=col3.find({"state_name":{"$ne":""}})
 
     json_documents =[]
     for document in collections:
@@ -51,6 +52,29 @@ def get_alcohol_facilities():
         json_documents.append(document)
 
     return jsonify(json_documents)
+
+@app.route("/rehab_facilities/state/<state>", methods=["GET"])
+def get_rehab_facilities_by_state(state):
+    col3 = db.alcohol_rehabilitation_data
+    query = {"state_name": state}
+    collections = col3.find(query)
+
+    json_documents = []
+    for document in collections:
+        document.pop('_id', None)
+        json_documents.append(document["facilities"])
+
+    return jsonify(json_documents)
+
+@app.route("/search_by_state", methods=["POST"])
+def search_by_state():
+    user_input = request.form.get("state_input")
+    if user_input:
+        state_title_case = user_input.title()
+        state_query_param = state_title_case.replace(" ", "%20")
+        return redirect(url_for('get_rehab_facilities_by_state', state=state_query_param))
+    else:
+        return "Please enter a valid state name."
 
 if __name__ == "__main__":
     app.run(debug=True)

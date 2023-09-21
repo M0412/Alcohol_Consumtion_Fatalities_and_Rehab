@@ -32,37 +32,51 @@
 <body>
     <header class="w3-container w3-center w3-padding-48 w3-white">
         <h1 class="w3-xxxlarge"><b>Sober Up!</b></h1>
-        <h6>A Deep Dive Into America's <span class="w3-tag">Drinking Culture, Risks & Resources</span></h6>
+        <h4>A Deep Dive Into America's <span class="w3-tag">Drinking Culture, Risks & Resources</span></h4>
     </header>
-    <header class="w3-display-container w3-wide" id="home">
-        <img class="w3-image" src="https://image.cnbcfm.com/api/v1/image/106342087-1579267202830gettyimages-542874313.jpeg?v=1579267318&w=929&h=523&vtcrop=y" alt="Prohibition" width="1600" height="960">
+    <header class="w3-display-container w3-wide w3-gray" id="home">
+        <div class="w3-container w3-twothird">
+            <img class="w3-image" src="https://image.cnbcfm.com/api/v1/image/106342087-1579267202830gettyimages-542874313.jpeg?v=1579267318&w=929&h=523&vtcrop=y" alt="Prohibition" height="10%" margin-bottom="10px">
+        </div>
+        <div class="w3-container w3-third w3-gray">
+            <h4>Project Summary</h4>
+            <p>Placeholder Text</p>
+        </div>
     </header>
-    <div class="w3-white w3-margin">
-        <div class="w3-container w3-black">
-          <h4>Project Summary</h4>
-          <p>Placeholder Text</p>
-        </div>
+    <!---Creating a spacer from header to body content-->
+    <div class="w3-container w3-white">
+        <h2> </h2>
+        <h2> </h2>
     </div>
-    <!-- Create a container for the map -->
-    <div class="w3-white w3-margin">
-        <div class="w3-container w3-threequarter">
-            <h4>Test Container</h4>
-        </div>
-        <div class="w3-container w3-threequarter w3-padding-48">
-            <div id="consumption_map" style="width: 100%; height: 400px;"></div>
-        </div>
-        <div class="w3-container w3-quarter w3-white">
-            <h4>Summary Text</h4>
-            <p>This is where explanation goes</p>
-        </div>
+    <div class="w3-container w3-center">
+        <h4>Test Container</h4>
     </div>
-     <div class="w3-container w3-margin w3-white">
-        <div class="w3-container w3-threequarter ">
-            <div id="rehab_map" style="width: 100%; height: 400px;"></div>
-        </div>
-        <div class="col-md-5">
-            <div id="bar"></div>
-        </div>
+    <div class="w3-container w3-threequarter w3-padding-16">
+        <div id="consumption_map" style="width: 100%; height: 400px;"></div>
+    </div>
+    <div class="w3-container w3-quarter w3-white">
+        <h5>Summary Text</h5>
+        <p>This is where explanation goes</p>
+    </div>
+    <div class="w3-container w3-threequarter ">
+        <div id="rehab_map" style="width: 100%; height: 400px;"></div>
+    </div>
+    <div class="w3-container w3-white">
+        <h2> </h2>
+        <h2> </h2>
+    </div>
+    <div class="w3-container w3-center">
+        <h4>Other Available Routes</h4>
+        <a href="http://127.0.0.1:5000/fatalities">Alcohol-Related Fatalities for California, Texas & Florida</a><br>
+        <a href="http://127.0.0.1:5000/consumption">Alcohol Consumption Across America</a><br>
+        <a href="http://127.0.0.1:5000/rehab_facilities">Rehab Facilities Across America</a><br>
+        <p><br></p>
+        <p>Find out what rehabilitation facilities exist in your state below!</p>
+        <form action="/search_by_state" method="POST">
+            <label for="state_input">Enter a State Name:</label>
+            <input type="text" id="state_input" name="state_input" required>
+            <input type="submit" value="Search">
+        </form>
     </div>
     <!-- Add your main JavaScript code -->
     <script src="../static/js/logic_map.js"></script>
