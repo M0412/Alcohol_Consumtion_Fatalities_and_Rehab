@@ -74,95 +74,96 @@
         <h2> </h2>
         <h2> </h2>
     </div>
+    <!--Bootstrap Tabs-->
+    <div id="tabs" class="w3-container w3-threequarter">	
+        <ul class="nav nav-tabs">
+                <li class="active">
+                    <a  href="#1" data-toggle="tab">Alcohol Consumption</a>
+                </li>
+                <li>
+                    <a href="#2" data-toggle="tab">Alcohol Fatalities</a>
+                </li>
+                <li>
+                    <a href="#3" data-toggle="tab">Rehab Facilities</a>
+                </li>
+        </ul>
+    
+                <div class="tab-content ">
+                    <div class="tab-pane active" id="1">
+                        <a href="http://127.0.0.1:5000/consumption"><h3>Alcohol Consumption Across America</h3></a><br>
+                        <div class="w3-container w3-threequarter w3-padding-16">
+                            <div id="consumption_map" style="width: 100%; height: 400px;"></div>
+                        </div>
+                        <div class="w3-container w3-quarter w3-white">
+                            <h5>Summary Text</h5>
+                            <p>This is where explanation goes</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="2">
+                        <a href="http://127.0.0.1:5000/fatalities"><h3>Alcohol-Related Fatalities for California, Texas & Florida</h3></a><br>
+                        <div class="w3-container w3-threequarter "> 
+                            <title>Dropdown Events</title>
+                            <h2>Alcohol fatalities in 2022</h2>
+                            <p>Select a state</p>
+                            <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <h3 style="text-align: center;">Age groups</h3>
+                                        <div id="bar"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">  
+                                        <h3 style="text-align: center;">Gender</h3>
+                                        <div id="genderPie"></div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <h3 style="text-align: center;">Race</h3>  
+                                        <div id="racePie"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane " id="3">
+                        <a href="http://127.0.0.1:5000/rehab_facilities"><h3>Rehab Facilities Across America</h3></a><br>
+                        <div class="w3-container w3-threequarter">
+                            <div class="jumbotron" style="text-align:center" >
+                                <img src="https://pulaskicounty.net/wp-content/uploads/2017/02/iStock-516394289.jpg" alt=" My Image" style="width:50%;" height="200">
+                                <div class="text-block text-center">
+                                    <h2>Rehab Facilities Per State</h2>
+                                    <h3>Use the interactive map below to get more information on available facilities</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w3-container w3-threequarter ">
+                            <div id="rehab_map" style="width: 100%; height: 400px;"></div>
+                            <script> rehab_map.invalidateSize(true); </script>
+                        </div>
+                        <div class="w3-container w3-white">
+                            <h2> </h2>
+                            <h2> </h2>
+                        </div>
+                        <div class="w3-container w3-third">
+                            <p>Find out what rehabilitation facilities exist in your state below!</p>
+                            <form action="/search_by_state" method="POST">
+                                <label for="state_input">Enter a State Name:</label>
+                                <input type="text" id="state_input" name="state_input" required>
+                                <input type="submit" value="Search">
+                            </form>
+                        </div>  
+                    </div>
+            
+    <hr></hr>
+    <!--- Fiza's Algolia Code-->
     <div>
         <input type=“text” id=“search-input” placeholder= "Enter">
     </div>
     <div class="w3-container w3-center">
         <h4>Test Container</h4>
     </div>
-    <div class="w3-container w3-threequarter w3-padding-16">
-        <div id="consumption_map" style="width: 100%; height: 400px;"></div>
-    </div>
-    <div class="w3-container w3-quarter w3-white">
-        <h5>Summary Text</h5>
-        <p>This is where explanation goes</p>
-    </div>
-    <hr></hr>
-    <div class="w3-container w3-threequarter "> 
-        <title>Dropdown Events</title>
-        <h2>Alcohol fatalities in 2022</h2>
-        <p>Select a state</p>
-        <select id="selDataset" onchange="optionChanged(this.value)"></select>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10">
-                <h3 style="text-align: center;">Age groups</h3>
-                <div id="bar"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-6">  
-                <h3 style="text-align: center;">Gender</h3>
-                <div id="genderPie"></div>
-            </div>
-            <div class="col-xs-6">
-                <h3 style="text-align: center;">Race</h3>  
-                <div id="racePie"></div>
-            </div>
-        </div>
-    </div>
-    <hr></hr>
-    <div class="w3-container w3-threequarter">
-        <div class="jumbotron" style="text-align:center" >
-          <img src="https://pulaskicounty.net/wp-content/uploads/2017/02/iStock-516394289.jpg" alt=" My Image" style="width:50%;" height="200">
-          <div class="text-block text-center">
-            <h2>Rehab Facilities Per State</h2>
-            <h3>Use the interactive map below to get more information on available facilities</h3>
-          </div>
-        </div>
-    </div>
-    <div class="w3-container w3-threequarter ">
-        <div id="rehab_map" style="width: 100%; height: 400px;"></div>
-    </div>
-    <div class="w3-container w3-white">
-        <h2> </h2>
-        <h2> </h2>
-    </div>
-    <div class="w3-container w3-third">
-      <p>Find out what rehabilitation facilities exist in your state below!</p>
-        <form action="/search_by_state" method="POST">
-            <label for="state_input">Enter a State Name:</label>
-            <input type="text" id="state_input" name="state_input" required>
-            <input type="submit" value="Search">
-        </form>
-    </div>  
 <div class="w3-container w3-threequarter"><h2>Other Available Routes</h2></div>
-
-<div id="tabs" class="w3-container w3-threequarter">	
-<ul class="nav nav-tabs">
-			<li class="active">
-                <a  href="#1" data-toggle="tab">Alcohol Fatalities</a>
-			</li>
-			<li>
-                <a href="#2" data-toggle="tab">Alcohol Consumption</a>
-			</li>
-			<li>
-                <a href="#3" data-toggle="tab">Rehab Facilities</a>
-			</li>
-</ul>
-
-			<div class="tab-content ">
-			  <div class="tab-pane active" id="1">
-                <a href="http://127.0.0.1:5000/fatalities"><h3>Alcohol-Related Fatalities for California, Texas & Florida</h3></a><br>
-			  </div>
-			  <div class="tab-pane" id="2">
-                <a href="http://127.0.0.1:5000/consumption"><h3>Alcohol Consumption Across America</h3></a><br>
-			  </div>
-              <div class="tab-pane" id="3">
-                <a href="http://127.0.0.1:5000/rehab_facilities"><h3>Rehab Facilities Across America</h3></a><br>
-			  </div>
-			</div>
-<hr></hr>
     <!-- Add your main JavaScript code -->
     <script src="../static/js/logic_map.js"></script>
     <script src="../static/js/Rehab_logic.js"></script>
