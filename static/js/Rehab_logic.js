@@ -54,5 +54,8 @@ d3.json(data).then(function(response){
     
     // Add our marker cluster layer to the map.
     map.addLayer(markers);
-
+    
+    // var evt = document.createEvent('UIEvents');
+    // evt.initUIEvent('resize', true, false, window, 0);
+    // window.dispatchEvent(evt);
 });
