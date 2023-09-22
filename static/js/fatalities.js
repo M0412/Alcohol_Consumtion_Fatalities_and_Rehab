@@ -97,7 +97,7 @@ function buildGenderPieChart(selectedData) {
 
     let layout = {
         height: 500,
-        width: 650
+        width: 600
     }
 
     Plotly.newPlot("genderPie", [pieChart], layout);

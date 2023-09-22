@@ -35,10 +35,11 @@
     <!-- Marker cluster JavaScript code -->
     <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
 
-     <!-- Bootstrap core JavaScript -->
+    <!-- Bootstrap core JavaScript -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
+    
     <style>
         /* css to customize Leaflet default styles  */
         .popupCustom .leaflet-popup-tip,
@@ -73,6 +74,9 @@
         <h2> </h2>
         <h2> </h2>
     </div>
+    <div>
+        <input type=“text” id=“search-input” placeholder= "Enter">
+    </div>
     <div class="w3-container w3-center">
         <h4>Test Container</h4>
     </div>
@@ -83,9 +87,34 @@
         <h5>Summary Text</h5>
         <p>This is where explanation goes</p>
     </div>
+    <hr></hr>
+    <div class="w3-container w3-threequarter "> 
+        <title>Dropdown Events</title>
+        <h2>Alcohol fatalities in 2022</h2>
+        <p>Select a state</p>
+        <select id="selDataset" onchange="optionChanged(this.value)"></select>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <h3 style="text-align: center;">Age groups</h3>
+                <div id="bar"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">  
+                <h3 style="text-align: center;">Gender</h3>
+                <div id="genderPie"></div>
+            </div>
+            <div class="col-xs-6">
+                <h3 style="text-align: center;">Race</h3>  
+                <div id="racePie"></div>
+            </div>
+        </div>
+    </div>
+    <hr></hr>
     <div class="w3-container w3-threequarter">
         <div class="jumbotron" style="text-align:center" >
-          <img src="../images/Rehab.png" alt=" My Image" style="width:100%;" height="200">
+          <img src="https://pulaskicounty.net/wp-content/uploads/2017/02/iStock-516394289.jpg" alt=" My Image" style="width:50%;" height="200">
           <div class="text-block text-center">
             <h2>Rehab Facilities Per State</h2>
             <h3>Use the interactive map below to get more information on available facilities</h3>
@@ -107,44 +136,6 @@
             <input type="submit" value="Search">
         </form>
     </div>  
-    <div class="w3-container w3-white">
-        <h2> </h2>
-        <h2> </h2>
-    </div>
-    <div class="w3-container w3-threequarter ">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dropdown Events</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <h2>Alcohol fatalities in 2022</h2>
-    <p>Select a state</p>
-    <select id="selDataset" onchange="optionChanged(this.value)"></select>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10">
-                <h3 style="text-align: center;">Age groups</h3>
-                <div id="bar"></div>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-xs-6">  
-                <h3 style="text-align: center;">Gender</h3>
-                <div id="genderPie"></div>
-            </div>
-            <div class="col-xs-6">
-                <h3 style="text-align: center;">Race</h3>  
-                <div id="racePie"></div>
-            </div>
-        </div>
-    </div>
-    </div>
-
-    <hr></hr>
-
 <div class="w3-container w3-threequarter"><h2>Other Available Routes</h2></div>
 
 <div id="tabs" class="w3-container w3-threequarter">	
@@ -172,14 +163,6 @@
 			  </div>
 			</div>
 <hr></hr>
-
-   <!-- <div class="w3-container w3-center">
-        <h4>Other Available Routes</h4>
-        <a href="http://127.0.0.1:5000/fatalities">Alcohol-Related Fatalities for California, Texas & Florida</a><br>
-        <a href="http://127.0.0.1:5000/consumption">Alcohol Consumption Across America</a><br>
-        <a href="http://127.0.0.1:5000/rehab_facilities">Rehab Facilities Across America</a><br>
-        <p><br></p> -->
-    <!--</div> -->
     <!-- Add your main JavaScript code -->
     <script src="../static/js/logic_map.js"></script>
     <script src="../static/js/Rehab_logic.js"></script>
