@@ -1,7 +1,10 @@
 # project-3
 
 ### Overview
-Analyzing the alcohol consumption to death ratio per state to find any observable geo-trends, and comparing it against available resources for rehabilitation. Through this project, we focus specifically on California and answer questions related to alcohol-related deaths, by gender, age, and chronic diseases  - simultaneously drawing relationships between rehabs/AAs etc.
+In 2022, it was found that around 63% of Americans regularly engage in drinking alcohol, be it socially or otherwise. In our project, we wanted to dig deeper into:
+- How much alcohol Americans consumed in 2022.
+- The adverse effects of alcohol, and how many people have died due to alcohol-related causes.
+- What resources are in place for alcohol addiction.
 
 ### Team Members 
 Fiza, Mimi, Nivetha, Katherine, Shipra
