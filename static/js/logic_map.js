@@ -1,3 +1,5 @@
+// Using D3 to access our data through file paths
+// We pull the geojson element to select the polygon features for the coordinates of each US state and append our consumption data to each state feature
 d3.json("../static/Data/JSON_Files/us-states.geojson")
   .then(function (usStatesData) {
     d3.json("../static/Data/JSON_Files/Alcohol_Consumption_by_State_2022.json")
@@ -11,6 +13,7 @@ d3.json("../static/Data/JSON_Files/us-states.geojson")
             return alcoholState.State === stateName;
           });
 
+          // The conditional appends the consumption data to matching state
           if (matchingState) {
             stateFeature.properties["Alcohol Consumption Per Capita"] = matchingState["Alcohol Consumption Per Capita"];
             stateFeature.properties["Ethanol Consumption Per Capita"] = matchingState["Ethanol Consumption Per Capita"];
@@ -27,8 +30,10 @@ d3.json("../static/Data/JSON_Files/us-states.geojson")
         // Now, usStatesData has the "Alcohol Consumption Per Capita" data in its properties
         console.log(usStatesData);
       
+        // Creating our map object
         let myMap = L.map('consumption_map').setView([37.8, -96], 3);
 
+        // Creating our tile layer
         let tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -45,7 +50,7 @@ d3.json("../static/Data/JSON_Files/us-states.geojson")
            return this._div;
        };
 
-       // method that we will use to update the control based on feature properties passed
+       // Method that we will use to update the control based on feature properties passed
        info.update = function (props) {
            this._div.innerHTML = '<h3>US Alcohol Consumption in 2022</h3>' +  (props ?
                '<h4>' + props.name + '</h4><br>' +
@@ -79,6 +84,7 @@ d3.json("../static/Data/JSON_Files/us-states.geojson")
           });
         }
         
+        // Creating our legend object for the constructed map
         var legend = L.control({ position: 'bottomright' });
 
         var labels = ['16-24 gal', '24-32 gal', '32-40 gal', '40-48 gal', '48-56 gal', '56+ gal'];
@@ -86,7 +92,7 @@ d3.json("../static/Data/JSON_Files/us-states.geojson")
         legend.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'info legend');
 
-            // loop through the color intervals from the getColor function
+            // Loop through the color intervals from the getColor function
             for (var i = 0; i < labels.length; i++) {
                 var label=labels[i];
                 var color = getColor(getRangeValue(label));
@@ -106,6 +112,7 @@ d3.json("../static/Data/JSON_Files/us-states.geojson")
       });
   });
 
+// Creating a function that assigns a specific color depending on the consumption amount
 function getColor(d) {
   return  d >= 56  ? '#a50f15' :
           d >= 48  ? '#de2d26' :
@@ -116,6 +123,7 @@ function getColor(d) {
           "#ccc";
 }
 
+// Creating a function that sets the style of the state polygon
 function style(feature) {
   return {
       fillColor: getColor(feature.properties["Alcohol Consumption Per Capita"]),

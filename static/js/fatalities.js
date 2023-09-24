@@ -1,10 +1,14 @@
+// Assign a URL constant to our data file path
 const url = '../static/Data/JSON_Files/samhsa_alcohol.json';
 
+// Creating our data Promise element to ensure data is collected on the console
 const dataPromise = d3.json(url);
 
+// Creating variables for our graphs
 let plotdata;
 let selectedData;
 
+// Creating a constant for Race
 const racesToExtract = [
     "White",
     "Black or African-American",
@@ -14,12 +18,14 @@ const racesToExtract = [
     "Unknown_race"
   ];
 
+// Creating a constant for Gender
 const gendersToExtract = [
     "Male",
     "Female",
     "Unknown_gender"
 ]  
 
+// Creating a function that creates a drop-down element for our fatality parameters, i.e for California, Texas and Florida
 function init() {
     let dropdownMenu = d3.select("#selDataset");
 
@@ -28,6 +34,7 @@ function init() {
 
         console.log(data);
 
+        // Appending each state in the JSON path to our drop-down
         plotdata.forEach(item => {
             console.log(item.State);
             dropdownMenu.append('option')
@@ -38,6 +45,7 @@ function init() {
         let firstSample = plotdata[0].State;
         getSelectedData(firstSample);
 
+        // Calling our functions to build our respective plots for the selected State
         buildBarPlot(selectedData);
         buildGenderPieChart(selectedData);
         buildRacePieChart(selectedData);
@@ -47,6 +55,7 @@ function init() {
 
 init();
 
+// Creating a function to set the default element to our drop down
 function getSelectedData(state) {
     // if by mistake the plotdata is lost, we will reset the page to init() mode
     // which sets the plotdata
@@ -61,6 +70,7 @@ function getSelectedData(state) {
     })
 }
 
+// Creating a function to build our bar plot
 function buildBarPlot(selectedData) {
 
     let ageData = Object.entries(selectedData).filter(([key]) => key.includes("years") || key == ("Unknown_age")).map(([key, value]) => ({ key, value }));
@@ -79,6 +89,7 @@ function buildBarPlot(selectedData) {
     Plotly.newPlot('bar', [barPlot]);
 }
 
+// Creating a function to build of pie chart for Gender of fatalities
 function buildGenderPieChart(selectedData) {
 
     let genderData = {};
@@ -105,6 +116,7 @@ function buildGenderPieChart(selectedData) {
     console.log(genderData);
 }
 
+// Creating a function to build of pie chart for Race of fatalities
 function buildRacePieChart(selectedData) {
     let raceData = {};
 
@@ -128,6 +140,7 @@ function buildRacePieChart(selectedData) {
     Plotly.newPlot("racePie", [pieChart], layout);
 }
 
+// Building another function that allows the use to select a different element in our drop-down and visualize our data
 function optionChanged(value) {
     getSelectedData(value);
     buildBarPlot(selectedData);

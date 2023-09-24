@@ -1,5 +1,5 @@
 
-// Create our map
+// Create our map object
 var map = L.map('rehab_map').setView([37.8, -96], 4);
 
 var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -28,13 +28,13 @@ d3.json(data).then(function(response){
     // Loop through the data.
     for (let i = 0; i < response.length; i++) {
 
-        //get facilaty array for state i
+        // Get facility array for state i
         let facilityList = response[i].facilities;
 
-        // loop through facility array 
+        // Loop through facility array 
         for (let j = 0; j < facilityList.length; j++){
             facility_count++;
-            // for each facility Set the data location property to a variable
+            // For each facility set the data location property to a variable
             let location_long = facilityList[j].Longitude;
             let location_lat = facilityList[j].Latitude;
             //console.log(location1,location2)
