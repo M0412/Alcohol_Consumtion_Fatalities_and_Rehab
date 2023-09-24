@@ -23,7 +23,7 @@ const gendersToExtract = [
     "Male",
     "Female",
     "Unknown_gender"
-]  
+];
 
 // Creating a function that creates a drop-down element for our fatality parameters, i.e for California, Texas and Florida
 function init() {
@@ -83,8 +83,9 @@ function buildBarPlot(selectedData) {
         x: xAxis,
         y: yAxis,
         type: "bar",
-        orientation: "v"
-    }
+        orientation: "v",
+        marker:{color:'#fcbba1'}
+    };
 
     Plotly.newPlot('bar', [barPlot]);
 }
@@ -100,10 +101,18 @@ function buildGenderPieChart(selectedData) {
         }
     }
 
+
     let pieChart = {
         values: Object.values(genderData),
         labels: Object.keys(genderData),
-        type: "pie"
+        type: "pie",
+        marker:{
+            colors:[
+                '#fee5d9',
+                '#fb6a4a',
+                '#a50f15'
+            ]
+        }
     };
 
     let layout = {
@@ -129,7 +138,17 @@ function buildRacePieChart(selectedData) {
     let pieChart = {
         values: Object.values(raceData),
         labels: Object.keys(raceData),
-        type: "pie"
+        type: "pie",
+        marker:{
+            colors:[
+                '#a50f15',
+                '#de2d26',
+                '#fb6a4a',
+                '#fc9272',
+                '#fcbba1',
+                '#fee5d9'
+            ]
+        }
     };
 
     let layout = {

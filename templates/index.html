@@ -58,18 +58,27 @@
         <h1 class="w3-xxxlarge"><b>Sober Up!</b></h1>
         <h4>A Deep Dive Into America's <span class="w3-tag">Drinking Culture, Risks & Resources</span></h4>
     </header>
-    <header class="w3-display-container w3-wide w3-gray" id="home">
-        <div class="w3-container w3-twothird">
+    <header class="w3-display-container w3-wide" id="home">
+        <div class="w3-container">
             <img class="w3-image" src="https://image.cnbcfm.com/api/v1/image/106342087-1579267202830gettyimages-542874313.jpeg?v=1579267318&w=929&h=523&vtcrop=y" alt="Prohibition" height="10%" margin-bottom="10px">
         </div>
-        <div class="w3-container w3-third w3-gray">
+        <hr></hr>
+        <div class="w3-container w3-light-gray">
             <h4>Project Summary</h4>
-            <p>Placeholder Text</p>
+            <p> In 2022, it was found that around 63% of Americans regularly engage in drinking alcohol, be it socially or otherwise. Everyone needs a little Dutch courage once in a while! But how much is too much? This question began our research into America's drinking culture and how much of this negatively affected our population. Furthermore, are there enough resources out there to curb excessive drinking? In our project, we wanted to dig deeper into: <br>
+                <br>
+                <ul>
+                    <li>How much alcohol Americans consumed in 2022.</li>
+                    <li>The adverse effects of alcohol, and how many people have died due to alcohol-related causes.</li>
+                    <li>What medical facilities are in place to assist with alcohol addiction.</li><br>
+                </ul>
+                <a href="https://extension.psu.edu/alcoholic-beverage-consumption-statistics-and-trends-2023#:~:text=When%20averaged%20over%20two%20years,legal%20drinking%20age%22%20of%2021.">source: Penn State Extension</a>
+            </p>
         </div>
     </header>
+    <hr></hr>
     <!---Creating a spacer from header to body content-->
     <div class="w3-container w3-white">
-        <h2> </h2>
         <h2> </h2>
     </div>
     <!--Bootstrap Tabs-->
@@ -106,9 +115,13 @@
                             <select id="selDataset" onchange="optionChanged(this.value)"></select>
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-md-10">
+                                    <div class="w3-twothird">
                                         <h3 style="text-align: center;">Age groups</h3>
                                         <div id="bar"></div>
+                                    </div>
+                                    <div class="w3-third">
+                                        <h5>Summary Text</h5>
+                                        <p> This is where explanation goes</p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -126,37 +139,36 @@
                     </div>
                     <div class="tab-pane" id="3">
                         <!--<a href="http://127.0.0.1:5000/rehab_facilities"><h3>Rehab Facilities Across America</h3></a><br>-->
-                        <div class="w3-container w3-threequarter">
-                            <div class="jumbotron" style="text-align:center">
-                                <img src="https://pulaskicounty.net/wp-content/uploads/2017/02/iStock-516394289.jpg" alt=" My Image" style="width:50%;" height="200">
-                                <div class="text-block text-center">
-                                    <h2>Rehab Facilities Per State</h2>
-                                    <h4>Use the interactive map below to get more information on available facilities</h4>
+                            <div class="w3-container w3-wide w3-padding-16">
+                                <div class="jumbotron" style="text-align:center" height="400px">
+                                    <img src="https://pulaskicounty.net/wp-content/uploads/2017/02/iStock-516394289.jpg" alt=" My Image" style="width:30%;" height="190">
+                                    <div class="text-block text-center">
+                                        <h2>Rehab Facilities Per State</h2>
+                                        <h4>Use the interactive map below to get more information on available facilities</h4>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="w3-container w3-threequarter">
-                            <div id="rehab_map" style="width: 100%; height: 400px;"></div>
-                        </div>
+                            <div class="w3-container w3-wide w3-padding-16">
+                                <div id="rehab_map" style="width: 100%; height: 600px;"></div>
+                            </div>
                         <div class="w3-container w3-white">
-                            <h2> </h2>
-                            <h2> </h2>
+                            <h5>Summary Text</h5>
+                            <p>This is where explanation goes</p>
                         </div>
-                        <div class="w3-container w3-third">
-                            <p>Find out what rehabilitation facilities exist in your state below!</p>
+                        <div class="w3-container">
+                            <h5>Find out what rehabilitation facilities exist in your state below!</h5>
                             <form action="/search_by_state" method="POST">
                                 <label for="state_input">Enter a State Name:</label>
                                 <input type="text" id="state_input" name="state_input" required>
                                 <input type="submit" value="Search">
                             </form>
-                        </div>  
+                        </div>
                     </div>
                 </div>
     
     </div>
-    <hr></hr>
     <!-- Creating our API endpoints to attach to at the end of our dashboard-->
-    <div class="w3-container w3-threequarter"><h2>Other Available Routes</h2>
+    <div class="w3-container w3-threequarter"><h3>Other Available Routes</h3>
         <a href="http://127.0.0.1:5000/fatalities">Alcohol-Related Fatalities for California, Texas & Florida</a><br>
         <a href="http://127.0.0.1:5000/consumption">Alcohol Consumption Across America</a><br>
         <a href="http://127.0.0.1:5000/rehab_facilities">Rehab Facilities Across America</a>

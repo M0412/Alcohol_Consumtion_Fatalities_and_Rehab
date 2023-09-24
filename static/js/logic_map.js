@@ -52,7 +52,7 @@ d3.json("../static/Data/JSON_Files/us-states.geojson")
 
        // Method that we will use to update the control based on feature properties passed
        info.update = function (props) {
-           this._div.innerHTML = '<h3>US Alcohol Consumption in 2022</h3>' +  (props ?
+           this._div.innerHTML = '<h4>US Alcohol Consumption in 2022</h4>' +  (props ?
                '<h4>' + props.name + '</h4><br>' +
                '<strong>Total Alcohol Consumption: '+ props["Alcohol Consumption Per Capita"] + ' gallons</strong><br>'+
                'Beer Consumption: ' + props["Beer Consumption Per Capita"] + ' gallons<br>' +
