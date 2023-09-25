@@ -1,4 +1,4 @@
-# project-3
+# Project-3
 
 ### Overview
 In 2022, it was found that around 63% of Americans regularly engage in drinking alcohol, be it socially or otherwise. In our project, we wanted to dig deeper into:
@@ -28,4 +28,15 @@ Fiza, Mimi, Nivetha, Katherine, Shipra
 4) SAMHSA  National Directory of Drug and Alcohol Abuse Treatment Facilities - 2022 <br> https://www.samhsa.gov/data/report/national-directory-of-drug-and-alcohol-abuse-treatment-facilities
 5) Population of the U.S for 2022 by state https://www.statista.com/statistics/183497/population-in-the-federal-states-of-the-us
 6) GEOJSON data for California DUIs <br> https://data.chhs.ca.gov/dataset/licensed-driving-under-the-influence-providers 
+
+
+### Data and Delivery
+Once we gathered our data sources, we looked at the information holistically and isolated our facility research to 3 states for a smaller sample size
+
+### Back End
+
+### Visualizations
+
+### Our findings
+
 
