@@ -4,7 +4,7 @@
 In 2022, it was found that around 63% of Americans regularly engage in drinking alcohol, be it socially or otherwise. In our project, we wanted to dig deeper into:
 - How much alcohol Americans consumed in 2022.
 - The adverse effects of alcohol, and how many people have died due to alcohol-related causes.
-- What resources are in place for alcohol addiction.
+- What medical facilities are in place to assist with alcohol addiction.
 
 ### Team Members 
 Fiza, Mimi, Nivetha, Katherine, Shipra
