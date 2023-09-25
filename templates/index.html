@@ -82,111 +82,120 @@
         <h2> </h2>
     </div>
     <!--Bootstrap Tabs-->
-    <div id="tabs" class="w3-container w3-threequarter">	
-        <ul class="nav nav-tabs">
-                <li class="active">
-                    <a  href="#1" data-toggle="tab">Alcohol Consumption</a>
-                </li>
-                <li>
-                    <a href="#2" data-toggle="tab">Alcohol Fatalities</a>
-                </li>
-                <li>
-                    <a href="#3" data-toggle="tab">Rehab Facilities</a>
-                </li>
-        </ul>
-    
-                <div class="tab-content ">
-                    <div class="tab-pane active" id="1">
-                        <!--a href="http://127.0.0.1:5000/consumption"><h3>Alcohol Consumption Across America</h3></a><br>-->
-                        <div class="w3-container w3-threequarter w3-padding-16">
-                            <div id="consumption_map" style="width: 100%; height: 400px;"></div>
-                        </div>
-                        <div class="w3-container w3-quarter w3-white">
-                            <h5>Trends in Alcohol Consumption Across the US</h5>
-                            <p>States with the Highest Alcohol Consumption Per Capita<br>
-                                <ul>
-                                    <li>New Hampshire - 59.5 gallons</li>
-                                    <li>Vermont - 49.4 gallons</li>
-                                    <li>Montana - 48.7 gallons</li>
-                                </ul><br>
-                                Contrary to size of state and it's respective population, it's interesting to see that New Hampshire (1.4m in population) is the highest when it comes to alcohol consumption. This suggests there could be other factors in play, such as the age distribution and/or race. <br>
-                                States with the Lowest Alcohol Consumption Per Capita<br>
-                                <ul>
-                                    <li>Utah - 17.7 gallons</li>
-                                    <li>Maryland - 25.4 gallons</li>
-                                    <li>Idaho - 26.5 gallons</li>
-                                </ul>
-                            </p>
+    <div class="container" style="height: 100vh; width:90%">
+        <div class="d-flex justify-content-center align-items-center" style="height: 100%; padding-left:15%">
+            <div id="tabs" class="w3-container w3-threequarter">	
+                <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a  href="#1" data-toggle="tab">Alcohol Consumption</a>
+                        </li>
+                        <li>
+                            <a href="#2" data-toggle="tab">Alcohol Fatalities</a>
+                        </li>
+                        <li>
+                            <a href="#3" data-toggle="tab">Rehab Facilities</a>
+                        </li>
+                </ul>
+            
+                        <div class="tab-content ">
+                            <div class="tab-pane active" id="1">
+                                <!--a href="http://127.0.0.1:5000/consumption"><h3>Alcohol Consumption Across America</h3></a><br>-->
+                                <div class="w3-container w3-threequarter w3-padding-16">
+                                    <div id="consumption_map" style="width: 100%; height: 400px;"></div>
+                                </div>
+                                <div class="w3-container w3-quarter w3-white">
+                                    <h5>Trends in Alcohol Consumption Across the US</h5>
+                                    <p>States with the Highest Alcohol Consumption Per Capita<br>
+                                        <ul>
+                                            <li>New Hampshire - 59.5 gallons</li>
+                                            <li>Vermont - 49.4 gallons</li>
+                                            <li>Montana - 48.7 gallons</li>
+                                        </ul><br>
+                                        Contrary to size of state and it's respective population, it's interesting to see that New Hampshire (1.4m in population) is the highest when it comes to alcohol consumption. This suggests there could be other factors in play, such as the age distribution and/or race. <br>
+                                        States with the Lowest Alcohol Consumption Per Capita<br>
+                                        <ul>
+                                            <li>Utah - 17.7 gallons</li>
+                                            <li>Maryland - 25.4 gallons</li>
+                                            <li>Idaho - 26.5 gallons</li>
+                                        </ul>
+                                    </p>
 
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="2">
-                        <!--<a href="http://127.0.0.1:5000/fatalities"><h3>Alcohol-Related Fatalities for California, Texas & Florida</h3></a><br>-->
-                        <div class="w3-container w3-threequarter "> 
-                            <title>Dropdown Events</title>
-                            <h2>Alcohol fatalities in 2022</h2>
-                            <p>Select a state</p>
-                            <select id="selDataset" onchange="optionChanged(this.value)"></select>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="w3-twothird">
-                                        <h3 style="text-align: center;">Age groups</h3>
-                                        <div id="bar"></div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="2">
+                                <!--<a href="http://127.0.0.1:5000/fatalities"><h3>Alcohol-Related Fatalities for California, Texas & Florida</h3></a><br>-->
+                                <div class="w3-container w3-wide w3-padding-16 "> 
+                                    <title>Dropdown Events</title>
+                                    <h2>Alcohol fatalities in 2022</h2>
+                                    <div class="w3-container">
+                                        <img class="w3-image" style="height: 425px;" src="https://www.nicerx.com/wp-content/uploads/2022/10/NiceRx-Alcohol-Across-the-US_01-SOCIAL-HEADER-1500x794.jpg" alt="Prohibition" height="10%" margin-bottom="10px">
                                     </div>
-                                    <div class="w3-third">
-                                        <h5>Summary Text</h5>
-                                        <p> This is where explanation goes</p>
+                                    <div class="container w3-padding-large">
+                                        <p>Select a state</p>
+                                        <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                                    </div>    
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="w3-twothird">
+                                                <h3 style="text-align: center;">Age groups</h3>
+                                                <div id="bar"></div>
+                                            </div>
+                                            <div class="w3-third">
+                                                <h5>Summary Text</h5>
+                                                <p> This is where explanation goes</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-6">  
+                                                <h3 style="text-align: center;">Gender</h3>
+                                                <div id="genderPie"></div>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <h3 style="text-align: center;">Race</h3>  
+                                                <div id="racePie"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-xs-6">  
-                                        <h3 style="text-align: center;">Gender</h3>
-                                        <div id="genderPie"></div>
+                            </div>
+                            <div class="tab-pane" id="3">
+                                <!--<a href="http://127.0.0.1:5000/rehab_facilities"><h3>Rehab Facilities Across America</h3></a><br>-->
+                                    <div class="w3-container w3-wide w3-padding-16">
+                                        <div class="jumbotron" style="text-align:center" height="400px">
+                                            <img src="https://pulaskicounty.net/wp-content/uploads/2017/02/iStock-516394289.jpg" alt=" My Image" style="width:30%;" height="190">
+                                            <div class="text-block text-center">
+                                                <h2>Rehab Facilities Per State</h2>
+                                                <h4>Use the interactive map below to get more information on available facilities</h4>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-xs-6">
-                                        <h3 style="text-align: center;">Race</h3>  
-                                        <div id="racePie"></div>
+                                    <div class="w3-container w3-wide w3-padding-16">
+                                        <div id="rehab_map" style="width: 100%; height: 600px;"></div>
                                     </div>
+                                <div class="w3-container w3-white">
+                                    <h5>Summary Text</h5>
+                                    <p>This is where explanation goes</p>
+                                </div>
+                                <div class="w3-container">
+                                    <h5>Find out what rehabilitation facilities exist in your state below!</h5>
+                                    <form action="/search_by_state" method="POST">
+                                        <label for="state_input">Enter a State Name:</label>
+                                        <input type="text" id="state_input" name="state_input" required>
+                                        <input type="submit" value="Search">
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane" id="3">
-                        <!--<a href="http://127.0.0.1:5000/rehab_facilities"><h3>Rehab Facilities Across America</h3></a><br>-->
-                            <div class="w3-container w3-wide w3-padding-16">
-                                <div class="jumbotron" style="text-align:center" height="400px">
-                                    <img src="https://pulaskicounty.net/wp-content/uploads/2017/02/iStock-516394289.jpg" alt=" My Image" style="width:30%;" height="190">
-                                    <div class="text-block text-center">
-                                        <h2>Rehab Facilities Per State</h2>
-                                        <h4>Use the interactive map below to get more information on available facilities</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="w3-container w3-wide w3-padding-16">
-                                <div id="rehab_map" style="width: 100%; height: 600px;"></div>
-                            </div>
-                        <div class="w3-container w3-white">
-                            <h5>Summary Text</h5>
-                            <p>This is where explanation goes</p>
-                        </div>
-                        <div class="w3-container">
-                            <h5>Find out what rehabilitation facilities exist in your state below!</h5>
-                            <form action="/search_by_state" method="POST">
-                                <label for="state_input">Enter a State Name:</label>
-                                <input type="text" id="state_input" name="state_input" required>
-                                <input type="submit" value="Search">
-                            </form>
-                        </div>
-                    </div>
+                    <!-- Creating our API endpoints to attach to at the end of our dashboard-->
+                <div class="w3-container w3-threequarter"><h3>Other Available Routes</h3>
+                    <a href="http://127.0.0.1:5000/fatalities">Alcohol-Related Fatalities for California, Texas & Florida</a><br>
+                    <a href="http://127.0.0.1:5000/consumption">Alcohol Consumption Across America</a><br>
+                    <a href="http://127.0.0.1:5000/rehab_facilities">Rehab Facilities Across America</a>
                 </div>
-    
-    </div>
-    <!-- Creating our API endpoints to attach to at the end of our dashboard-->
-    <div class="w3-container w3-threequarter"><h3>Other Available Routes</h3>
-        <a href="http://127.0.0.1:5000/fatalities">Alcohol-Related Fatalities for California, Texas & Florida</a><br>
-        <a href="http://127.0.0.1:5000/consumption">Alcohol Consumption Across America</a><br>
-        <a href="http://127.0.0.1:5000/rehab_facilities">Rehab Facilities Across America</a>
-    </div>
+            </div>
+        </div>    
+
         <!-- Adding our main JavaScript code for our visualizations -->
         <script src="../static/js/logic_map.js"></script>
         <script src="../static/js/Rehab_logic.js"></script>

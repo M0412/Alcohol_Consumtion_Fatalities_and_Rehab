@@ -84,7 +84,8 @@ function buildBarPlot(selectedData) {
         y: yAxis,
         type: "bar",
         orientation: "v",
-        marker:{color:'#fcbba1'}
+        marker:{color:'184e77'}
+        //marker:{color:'#fcbba1'}
     };
 
     Plotly.newPlot('bar', [barPlot]);
@@ -108,9 +109,12 @@ function buildGenderPieChart(selectedData) {
         type: "pie",
         marker:{
             colors:[
-                '#fee5d9',
-                '#fb6a4a',
-                '#a50f15'
+                '184e77', //'ffc8dd',
+                'f4978e',
+                'f5f3f4'
+                // '#fee5d9',
+                // '#fb6a4a',
+                // '#a50f15'
             ]
         }
     };
@@ -140,14 +144,22 @@ function buildRacePieChart(selectedData) {
         labels: Object.keys(raceData),
         type: "pie",
         marker:{
-            colors:[
-                '#a50f15',
-                '#de2d26',
-                '#fb6a4a',
-                '#fc9272',
-                '#fcbba1',
-                '#fee5d9'
+            colors: [
+                '184e77',
+                '168aad',
+                '52b69a',
+                '99d98c',
+                'd9ed92',
+                'f0f3bd'
             ]
+            // colors:[
+            //     '#a50f15',
+            //     '#de2d26',
+            //     '#fb6a4a',
+            //     '#fc9272',
+            //     '#fcbba1',
+            //     '#fee5d9'
+            // ]
         }
     };
 
