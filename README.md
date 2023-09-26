@@ -73,5 +73,5 @@ We created 4 unique visualizations in the dashboard utilizing D3, Plotly, Leafle
 California, Florida, and Texas are among the 15 states with the lowest number of rehabilitation facilities per capita despite having a high population as well as high alcohol related fatality rate.
 
 ### Future direction
-1) In our initial research, we found a javascript library called “Algolia Places” but were unable to spend enough time to integrate it. It would enhance our search for better experience. Using GeoSearch, Algolia Places can create a search bar on our website that would help struggling alcohol addicts to look for rehabilitation facilities in their neighborhood. 
+In our initial research, we found a javascript library called “Algolia Places” but were unable to spend enough time to integrate it. It would enhance user's search for better experience. Using GeoSearch, Algolia Places can create a search bar on our website that would help struggling alcohol addicts to look for rehabilitation facilities in their neighborhood. 
 
