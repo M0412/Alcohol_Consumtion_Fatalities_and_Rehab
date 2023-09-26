@@ -43,7 +43,7 @@ We created 4 unique visualizations in the dashboard utilizing D3, Plotly, Leafle
 - Alcohol consumption interactive GeoJSON map has zoom in feature and display information on alcohol consumption per capita based user selection of states. It shows the highest and lowest consumption based on the color gradient in the legend section.
 
 
-<img src="images/consumption.png" alt="images" width="1000"/>
+<img src="images/consumption.png" alt="images" width="10000"/>
 
 - Alcohol fatalities has features like drop-down for selection of states, zoom in and out to maximize or minimize the information on the plot and hover-over display of demographic information including age groups, gender and race distribution.
 
