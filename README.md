@@ -6,6 +6,7 @@ In 2022, it was found that around 63% of Americans regularly engage in drinking 
 - The adverse effects of alcohol, and how many people have died due to alcohol-related causes.
 - How many medical facilities per state are available to assist with alcohol addiction.
 
+Tech stack: Python, MongoDB, Flask, HTML, CSS, JavaScript (Leaflet, Bootstrap, D3)
 
 ### Team Members 
 Fiza, Mimi, Nivetha, Katherine, Shipra
