@@ -20,17 +20,6 @@ Fiza, Mimi, Nivetha, Katherine, Shipra
 6) Is there a relationship between the amount of alcohol consumption per capita and the amount of available resources for alcoholism?
 
 
-### Data Sets - (focus on 2022 year)
-1) Alcohol-related deaths from 2011-2015 <br> https://www.cdc.gov/mmwr/volumes/69/wr/mm6930a1.htm <br>
-  a) More recent data on alcohol-related deaths <br>(https://www.bankrate.com/insurance/car/drunk-driving/#stats-2022) <br>
-  https://www-fars.nhtsa.dot.gov/States/StatesAlcohol.aspx <br>
-  b) Split by age <br> https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/topic-pages/tables/table-38 <br>
-2) https://www.openicpsr.org/openicpsr/project/105583/version/V5/view?path=/openicpsr/105583/fcr:versions/V5/apparent_per_capita_alcohol_consumption_1977_2018.csv&type=file 
-4) SAMHSA  National Directory of Drug and Alcohol Abuse Treatment Facilities - 2022 <br> https://www.samhsa.gov/data/report/national-directory-of-drug-and-alcohol-abuse-treatment-facilities
-5) Population of the U.S for 2022 by state https://www.statista.com/statistics/183497/population-in-the-federal-states-of-the-us
-6) GEOJSON data for California DUIs <br> https://data.chhs.ca.gov/dataset/licensed-driving-under-the-influence-providers
-7) States with highest alcohol consumption per population:<br> https://www.bankrate.com/insurance/car/drunk-driving/#stats-2022 and <br> https://drugabusestatistics.org/alcohol-related-deaths/
-
 ### Data and Delivery
 Once we gathered our data sources, we looked at the information holistically and isolated our facility research to 3 states for a smaller sample size.
 
@@ -68,10 +57,19 @@ We created 4 unique visualizations in the dashboard utilizing D3, Plotly, Leafle
 
 5) No, there are not enough rehabilitation resources in areas where alcohol-related deaths are prevalent to support the population demand. For example: California representing the highest number of deaths, are among the fifteen states with the lowest number of rehab facilities per capita. Texas in particular has the least number of facilities per capita in the United States.
 
-6) We observed a relationship between the amount of alcohol consumption per capita and the amount of available resources for alcoholism. Montana is one of the top 3 states with the highest alcohol consumption rate per capita, and is also one of the top three states with the highest number of facilities per capita. New Hampshire ranks 19th, and Vermont is ranked 9th with the highest number of facilities per capita.
-
-California, Florida, and Texas are among the 15 states with the lowest number of rehabilitation facilities per capita despite having a high population as well as high alcohol related fatality rate.
+6) We observed a relationship between the amount of alcohol consumption per capita and the amount of available resources for alcoholism. Montana is one of the top 3 states with the highest alcohol consumption rate per capita, and is also one of the top three states with the highest number of facilities per capita. New Hampshire ranks 19th, and Vermont is ranked 9th with the highest number of facilities per capita. California, Florida, and Texas are among the 15 states with the lowest number of rehabilitation facilities per capita despite having a high population as well as high alcohol related fatality rate.
 
 ### Future direction
 In our initial research, we found a javascript library called “Algolia Places” but were unable to spend enough time to integrate it. It would enhance user's search for better experience. Using GeoSearch, Algolia Places can create a search bar on our website that would help struggling alcohol addicts to look for rehabilitation facilities in their neighborhood. 
+
+
+### Data Sets - (focus on 2022 year)
+1) [Alcohol consumption](https://wisevoter.com/state-rankings/alcohol-consumption-by-state/)
+2) [US States GeoJSON](https://www.kaggle.com/datasets/pompelmo/usa-states-geojson)
+3) [SAMHSA Alcohol Fatalities](https://www.samhsa.gov/data/quick-statistics-results?qs_type=teds&state=California&year=2022&type=Admissions&view=full)
+4) [SAMHSA Alcohol Rehab Facilities](https://www.samhsa.gov/data/report/national-directory-of-drug-and-alcohol-abuse-treatment-facilities)
+5) [Population per state](https://www.statista.com/statistics/183497/population-in-the-federal-states-of-the-us/) This was used for per capita research. 
+
+### References
+1) States with highest alcohol consumption per population:<br> https://www.bankrate.com/insurance/car/drunk-driving/#stats-2022 <br> https://drugabusestatistics.org/alcohol-related-deaths/
 
