@@ -43,20 +43,25 @@ We created 4 unique visualizations in the dashboard utilizing D3, Plotly, Leafle
 - Alcohol consumption interactive GeoJSON map has zoom in feature and display information on alcohol consumption per capita based user selection of states. It shows the highest and lowest consumption based on the color gradient in the legend section.
 
 <p align="center">
-  <img src="images/consumption.png" alt="images" width="500"/>
+  <img src="images/consumption.png" alt="images" width="600"/>
 </p>
 
 - Alcohol fatalities has features like drop-down for selection of states, zoom in and out to maximize or minimize the information on the plot and hover-over display of demographic information including age groups, gender and race distribution.
 
-![Alt text](images/fatalities_age_groups.png)
-
-![Alt text](images/fatalities_gender.png)
-
-![Alt text](images/fatalities_race.png)
+<p align="center">
+  <img src="images/fatalities_age_groups.png" alt="images" width="600"/>
+</p>
+<p align="center">
+  <img src="images/fatalities_gender.png" alt="images" width="600"/>
+</p>
+<p align="center">
+  <img src="images/fatalities_race.png" alt="images" width="600"/>
+</p>
   
 - Rehab facilities has interactive cluster marker map which has zoom in feature and hover-over feature to highlight the area and click on for selection of markers to display the number of alcohol rehabilitation facilities per capita. By zoom in further and clicking on specific cluster marker, user can find information on a particular rehabilitation facility in the area.
-
-![Alt text](images/facilities.png)
+<p align="center">
+  <img src="images/facilities.png" alt="images" width="600"/>
+</p>
 
 ### Our findings
 1) Montana, New Hampshire and Vermont were found to be the states with highest consumption per capita. Based on more research, these states had low index in population diversity and were the top 10 states with lowest population per capita. 
