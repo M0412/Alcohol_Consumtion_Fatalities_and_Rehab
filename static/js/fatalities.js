@@ -74,11 +74,10 @@ function getSelectedData(state) {
 function buildBarPlot(selectedData) {
 
     let ageData = Object.entries(selectedData).filter(([key]) => key.includes("years") || key == ("Unknown_age")).map(([key, value]) => ({ key, value }));
-
-
     let xAxis = ageData.map(pair => pair.key);
     let yAxis = ageData.map(pair => pair.value);
 
+    // Add barplot details
     let barPlot = {
         x: xAxis,
         y: yAxis,
@@ -87,7 +86,14 @@ function buildBarPlot(selectedData) {
         marker:{color:'184e77'}
     };
 
-    Plotly.newPlot('bar', [barPlot]);
+    // Add your y-label here
+    let layout = {
+        yaxis: {
+            title: 'Percent (%)', 
+        }
+    };
+
+    Plotly.newPlot('bar', [barPlot], layout);
 }
 
 // Creating a function to build of pie chart for Gender of fatalities
