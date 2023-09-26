@@ -85,7 +85,6 @@ function buildBarPlot(selectedData) {
         type: "bar",
         orientation: "v",
         marker:{color:'184e77'}
-        //marker:{color:'#fcbba1'}
     };
 
     Plotly.newPlot('bar', [barPlot]);
@@ -109,12 +108,9 @@ function buildGenderPieChart(selectedData) {
         type: "pie",
         marker:{
             colors:[
-                '184e77', //'ffc8dd',
+                '184e77',
                 'f4978e',
                 'f5f3f4'
-                // '#fee5d9',
-                // '#fb6a4a',
-                // '#a50f15'
             ]
         }
     };
@@ -152,14 +148,6 @@ function buildRacePieChart(selectedData) {
                 'd9ed92',
                 'f0f3bd'
             ]
-            // colors:[
-            //     '#a50f15',
-            //     '#de2d26',
-            //     '#fb6a4a',
-            //     '#fc9272',
-            //     '#fcbba1',
-            //     '#fee5d9'
-            // ]
         }
     };
 
