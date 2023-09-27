@@ -14,7 +14,9 @@ Fiza, Mimi, Nivetha, Katherine, Shipra
 
 -----
 ### Instructions
+
 Please run our mongo.ipynb file to store our database in your local MongoDB system. This will allow you to successfully access our API end-routes.
+
 -----
 
 ### Questions
