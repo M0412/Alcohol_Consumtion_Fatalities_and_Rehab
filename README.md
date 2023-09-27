@@ -1,4 +1,4 @@
-# Project-3
+# A Deep Dive Into America's Drinking Culture, Risks and Resources
 
 ### Overview
 In 2022, it was found that around 63% of Americans regularly engage in drinking alcohol, be it socially or otherwise. In our project, we wanted to dig deeper into:
