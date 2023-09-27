@@ -9,10 +9,13 @@ In 2022, it was found that around 63% of Americans regularly engage in drinking 
 Tech stack: Python, MongoDB, Flask, HTML, CSS, JavaScript (Leaflet, Bootstrap, D3)
 
 ### Team Members 
+
 Fiza, Mimi, Nivetha, Katherine, Shipra
+
 -----
 ### Instructions
 Please run our mongo.ipynb file to store our database in your local MongoDB system. This will allow you to successfully access our API end-routes.
+-----
 
 ### Questions
 1) What are the top states with the highest alcohol consumption per capita?
